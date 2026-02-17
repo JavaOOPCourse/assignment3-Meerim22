@@ -21,19 +21,15 @@ public class Main {
 
         System.out.println("------ Premium Features ------");
 
-        if (streaming instanceof PremiumFeature)
-            ((PremiumFeature) streaming).upgradeToPremium();
+        ((PremiumFeature) streaming).upgradeToPremium();
 
-        if (cloud instanceof PremiumFeature)
-            ((PremiumFeature) cloud).upgradeToPremium();
+        ((PremiumFeature) cloud).upgradeToPremium();
 
         System.out.println("------ Billing Behavior ------");
 
-        if (cloud instanceof Billable)
-            ((Billable) cloud).generateBill();
+        ((Billable) cloud).generateBill();
 
-        if (consultation instanceof Billable)
-            ((Billable) consultation).generateBill();
+        ((Billable) consultation).generateBill();
 
         System.out.println("------ User Interactions ------");
 
